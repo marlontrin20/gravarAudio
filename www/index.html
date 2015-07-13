@@ -32,7 +32,7 @@
     <body>
         
         <span id="tempo"></span><br/>
-        <button type="button" value="Iniciar Gravação" onClick="gravar()"></button> <br/>
+        <input type="button" value="Iniciar Gravação" onClick="gravar()"> <br/>
         <input type="button" value="Parar Gravação" onClick="parar()"> <br/>
         <input type="button" value="Executar Gravação" onClick="play()"><br />
    
@@ -57,6 +57,10 @@
                     onRecordError);
 
                 classMedia.startRecord();
+                navigator.notification.alert('Teste: ',
+                    function(){},
+                    'Erro ao executar',
+                    'Fechar');
             }
 
             function parar() {
